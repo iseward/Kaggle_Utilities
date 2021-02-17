@@ -98,13 +98,13 @@ def perform_join(profile_name):
     if fit_type == jhkaggle.const.FIT_TYPE_REGRESSION:
         kf = KFold(folds, shuffle=True, random_state=seed)
         for train, test in kf.split(df_train_joined):
-            df_train_joined.ix[test, 'fold'] = fold
+            df_train_joined.loc[test, 'fold'] = fold
             fold += 1
     else:
         targets = df_train_joined[target_name]
         kf = StratifiedKFold(folds, shuffle=True, random_state=seed)
         for train, test in kf.split(df_train_joined, targets):
-            df_train_joined.ix[test, 'fold'] = fold
+            df_train_joined.loc[test, 'fold'] = fold
             fold += 1
 
     # Write joined files

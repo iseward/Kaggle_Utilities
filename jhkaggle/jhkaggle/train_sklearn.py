@@ -6,7 +6,7 @@
 
 import jhkaggle.util
 import tensorflow as tf
-import tensorflow.contrib.learn as learn
+import tensorflow.estimator as learn
 import scipy.stats
 import numpy as np
 import time

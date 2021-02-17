@@ -9,10 +9,8 @@ from jhkaggle.perturb_importance import calculate_importance_perturb
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-#MODEL = "lgb-0p56161_20190322-140833"
-#MODEL = "extree-0p409116_20190322-141616"
-#MODEL = "keras-0p452822_20190322-141239"
-MODEL = "xgboost-0p576026_20190322-135327"
+# Change this to models that are saved
+MODEL = "xgboost-0p563112_20210216-232621"
 
 start_time = time.time()
 model = jhkaggle.loader.load_model(MODEL,"model-fold1")

@@ -8,9 +8,9 @@ def load_config(profile,filename = None):
   global jhkaggle_config
   if not filename:
     home = str(Path.home())
-    filename = os.path.join(home,".jhkaggleConfig.json")
+    filename = os.path.join(home,".ISkaggleConfig.json")
     if not os.path.isfile(filename):
-      raise Exception(f"If no 'filename' paramater specifed, assume '.jhkaggleConfig.json' exists at HOME: {home}")
+      raise Exception(f"If no 'filename' paramater specifed, assume '.ISkaggleConfig.json' exists at HOME: {home}")
 
   with open(filename) as f:
       data = json.load(f)

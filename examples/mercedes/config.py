@@ -4,11 +4,8 @@
 # 
 # This file should be modified to define each new project.
 import sys
-sys.path.insert(0, "./jhkaggle/")
+sys.path.insert(0, "../../jhkaggle/")
 import jhkaggle
 
 jhkaggle.load_config('mercedes')
-
-
-
 
