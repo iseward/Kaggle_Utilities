@@ -35,6 +35,12 @@
         "BALANCE" : 0,
         "IGNORE" : [],
         "ORIG_FIELDS" : []
+      },
+      "2": {
+        "SOURCES" : ["jth-1", "reduce"],
+        "BALANCE" : 0,
+        "IGNORE" : [],
+        "ORIG_FIELDS" : [] 
       }
     },
     "PATH": "/Users/jheaton/data/kaggle/santander-trans"

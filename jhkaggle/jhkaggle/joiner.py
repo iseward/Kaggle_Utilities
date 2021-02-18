@@ -19,8 +19,11 @@ def perform_join(profile_name):
     df_test_joined = None
     data_columns = []
 
+    print('Using join profile: ' + profile_name)
+    #print('Availble profile names: ' + str(jhkaggle.jhkaggle_config['JOIN_PROFILES']))
+
     if profile_name not in jhkaggle.jhkaggle_config['JOIN_PROFILES']:
-        raise Error(f"Undefined join profile: {profile_name}")
+        raise Exception(f"Undefined join profile: {profile_name}")
     profile = jhkaggle.jhkaggle_config['JOIN_PROFILES'][profile_name]
     folds = jhkaggle.jhkaggle_config['FOLDS']
     seed = jhkaggle.jhkaggle_config['SEED']

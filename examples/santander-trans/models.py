@@ -34,9 +34,9 @@ def run_xgboost():
     print(params)
 
     start_time = time.time()
-    train = jhkaggle.train_xgboost.TrainXGBoost("1",params=params,run_single_fold=False)
+    train = jhkaggle.train_xgboost.TrainXGBoost("1",params=params,run_single_fold=True)
     train.early_stop = 50
-    train.rounds = 10000
+    train.rounds = 1000
     train.run()
 
 
