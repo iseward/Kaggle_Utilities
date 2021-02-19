@@ -34,9 +34,9 @@ def run_xgboost():
     print(params)
 
     start_time = time.time()
-    train = jhkaggle.train_xgboost.TrainXGBoost("1",params=params,run_single_fold=True)
+    train = jhkaggle.train_xgboost.TrainXGBoost("1",params=params,run_single_fold=False)
     train.early_stop = 50
-    train.rounds = 1000
+    train.rounds = 10000
     train.run()
 
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
   start_time = time.time()
   run_xgboost()
   #run_sklearn()
-  #run_lgb()
+  #run_lgb()  #issues with code? 'JSON characters in feature name'
   #run_keras()
 
   elapsed_time = time.time() - start_time
